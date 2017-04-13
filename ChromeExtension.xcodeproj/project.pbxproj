@@ -14,6 +14,9 @@
 		39BEC3CE1E9F95A700089130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BEC3CC1E9F95A700089130 /* LaunchScreen.storyboard */; };
 		39BEC3D91E9F95A700089130 /* ChromeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEC3D81E9F95A700089130 /* ChromeExtensionTests.swift */; };
 		39BEC3E41E9F95A700089130 /* ChromeExtensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEC3E31E9F95A700089130 /* ChromeExtensionUITests.swift */; };
+		39BEC3F81E9F991700089130 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEC3F71E9F991700089130 /* ShareViewController.swift */; };
+		39BEC3FB1E9F991700089130 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BEC3F91E9F991700089130 /* MainInterface.storyboard */; };
+		39BEC3FF1E9F991700089130 /* ChromeExtensionShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 39BEC3F51E9F991700089130 /* ChromeExtensionShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,28 @@
 			remoteGlobalIDString = 39BEC3BF1E9F95A700089130;
 			remoteInfo = ChromeExtension;
 		};
+		39BEC3FD1E9F991700089130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39BEC3B81E9F95A700089130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39BEC3F41E9F991700089130;
+			remoteInfo = ChromeExtensionShareExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		39BEC4031E9F991700089130 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				39BEC3FF1E9F991700089130 /* ChromeExtensionShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		39BEC3C01E9F95A700089130 /* ChromeExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromeExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +71,10 @@
 		39BEC3DF1E9F95A700089130 /* ChromeExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromeExtensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BEC3E31E9F95A700089130 /* ChromeExtensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromeExtensionUITests.swift; sourceTree = "<group>"; };
 		39BEC3E51E9F95A700089130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BEC3F51E9F991700089130 /* ChromeExtensionShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChromeExtensionShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BEC3F71E9F991700089130 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		39BEC3FA1E9F991700089130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		39BEC3FC1E9F991700089130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		39BEC3F21E9F991700089130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +115,7 @@
 				39BEC3C21E9F95A700089130 /* ChromeExtension */,
 				39BEC3D71E9F95A700089130 /* ChromeExtensionTests */,
 				39BEC3E21E9F95A700089130 /* ChromeExtensionUITests */,
+				39BEC3F61E9F991700089130 /* ChromeExtensionShareExtension */,
 				39BEC3C11E9F95A700089130 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +126,7 @@
 				39BEC3C01E9F95A700089130 /* ChromeExtension.app */,
 				39BEC3D41E9F95A700089130 /* ChromeExtensionTests.xctest */,
 				39BEC3DF1E9F95A700089130 /* ChromeExtensionUITests.xctest */,
+				39BEC3F51E9F991700089130 /* ChromeExtensionShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +162,16 @@
 			path = ChromeExtensionUITests;
 			sourceTree = "<group>";
 		};
+		39BEC3F61E9F991700089130 /* ChromeExtensionShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				39BEC3F71E9F991700089130 /* ShareViewController.swift */,
+				39BEC3F91E9F991700089130 /* MainInterface.storyboard */,
+				39BEC3FC1E9F991700089130 /* Info.plist */,
+			);
+			path = ChromeExtensionShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +182,12 @@
 				39BEC3BC1E9F95A700089130 /* Sources */,
 				39BEC3BD1E9F95A700089130 /* Frameworks */,
 				39BEC3BE1E9F95A700089130 /* Resources */,
+				39BEC4031E9F991700089130 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				39BEC3FE1E9F991700089130 /* PBXTargetDependency */,
 			);
 			name = ChromeExtension;
 			productName = ChromeExtension;
@@ -181,6 +230,23 @@
 			productReference = 39BEC3DF1E9F95A700089130 /* ChromeExtensionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		39BEC3F41E9F991700089130 /* ChromeExtensionShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39BEC4001E9F991700089130 /* Build configuration list for PBXNativeTarget "ChromeExtensionShareExtension" */;
+			buildPhases = (
+				39BEC3F11E9F991700089130 /* Sources */,
+				39BEC3F21E9F991700089130 /* Frameworks */,
+				39BEC3F31E9F991700089130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChromeExtensionShareExtension;
+			productName = ChromeExtensionShareExtension;
+			productReference = 39BEC3F51E9F991700089130 /* ChromeExtensionShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +274,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 39BEC3BF1E9F95A700089130;
 					};
+					39BEC3F41E9F991700089130 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SLHYE76MHB;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 39BEC3BB1E9F95A700089130 /* Build configuration list for PBXProject "ChromeExtension" */;
@@ -226,6 +297,7 @@
 				39BEC3BF1E9F95A700089130 /* ChromeExtension */,
 				39BEC3D31E9F95A700089130 /* ChromeExtensionTests */,
 				39BEC3DE1E9F95A700089130 /* ChromeExtensionUITests */,
+				39BEC3F41E9F991700089130 /* ChromeExtensionShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +324,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BEC3F31E9F991700089130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BEC3FB1E9F991700089130 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +363,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		39BEC3F11E9F991700089130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39BEC3F81E9F991700089130 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -295,6 +383,11 @@
 			isa = PBXTargetDependency;
 			target = 39BEC3BF1E9F95A700089130 /* ChromeExtension */;
 			targetProxy = 39BEC3E01E9F95A700089130 /* PBXContainerItemProxy */;
+		};
+		39BEC3FE1E9F991700089130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39BEC3F41E9F991700089130 /* ChromeExtensionShareExtension */;
+			targetProxy = 39BEC3FD1E9F991700089130 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -313,6 +406,14 @@
 				39BEC3CD1E9F95A700089130 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		39BEC3F91E9F991700089130 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39BEC3FA1E9F991700089130 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,6 +515,7 @@
 		39BEC3E91E9F95A700089130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SLHYE76MHB;
 				INFOPLIST_FILE = ChromeExtension/Info.plist;
@@ -427,6 +529,7 @@
 		39BEC3EA1E9F95A700089130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SLHYE76MHB;
 				INFOPLIST_FILE = ChromeExtension/Info.plist;
@@ -495,6 +598,32 @@
 			};
 			name = Release;
 		};
+		39BEC4011E9F991700089130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SLHYE76MHB;
+				INFOPLIST_FILE = ChromeExtensionShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.shinoki.ChromeExtension.ChromeExtensionShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		39BEC4021E9F991700089130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SLHYE76MHB;
+				INFOPLIST_FILE = ChromeExtensionShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.shinoki.ChromeExtension.ChromeExtensionShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,6 +657,14 @@
 			buildConfigurations = (
 				39BEC3EF1E9F95A700089130 /* Debug */,
 				39BEC3F01E9F95A700089130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		39BEC4001E9F991700089130 /* Build configuration list for PBXNativeTarget "ChromeExtensionShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39BEC4011E9F991700089130 /* Debug */,
+				39BEC4021E9F991700089130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
